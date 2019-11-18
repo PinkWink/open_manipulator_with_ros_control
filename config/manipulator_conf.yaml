@@ -1,0 +1,75 @@
+dynamixel_hw:
+  - joint1_motor
+  - joint2_motor
+  - joint3_motor
+  - joint4_motor
+  - gripper_motor
+
+# operating_mode = # 0: Current, 1: Velocity, 3: Position, 4: Ext. Position, 5: Current based Position Control, 16: PWM
+# joint_name: match URDF joint_name
+# gear_ratio
+# inverse: control the direction of motors
+# profile_acceleration: (rad/s^2)
+# profile_velocity: (rad/s)
+# origin_offset (pulse)
+
+# homing
+# enable: is need the homing?
+# mode: # 0: current base 1: digital input (limit_sensor)
+# direction: homing direction
+# max_speed: homing max_speed
+# current_limit: homing current limit
+
+joint1_motor:
+  id: 11
+  operating_mode: 3
+  joint_name: joint1
+  gear_ratio: 1.0
+  inverse: 1.0
+  profile_acceleration: 0.6
+  profile_velocity: 0.6
+  origin_offset: 2048
+
+joint2_motor:
+  id: 12
+  operating_mode: 3
+  joint_name: joint2
+  gear_ratio: 1.0
+  inverse: 1.0
+  profile_acceleration: 0.6
+  profile_velocity: 0.6
+  origin_offset: 2048
+
+joint3_motor:
+  id: 13
+  operating_mode: 3
+  joint_name: joint3
+  gear_ratio: 1.0
+  inverse: 1.0
+  profile_acceleration: 0.6
+  profile_velocity: 0.6
+  origin_offset: 2048
+
+joint4_motor:
+  id: 14
+  operating_mode: 3
+  joint_name: joint4
+  gear_ratio: 1.0
+  inverse: 1.0
+  profile_acceleration: 0.6
+  profile_velocity: 0.6
+  origin_offset: 2048
+
+gripper_motor:
+  id: 15
+  operating_mode: 5
+  joint_name: gripper
+  gear_ratio: 1.0
+  inverse: 1.0
+  profile_acceleration: 0
+  profile_velocity: 0.6
+  origin_offset: 2635
+  gripper:
+    enable: true
+    gap_size: 1616
+    current_limit: 0.1

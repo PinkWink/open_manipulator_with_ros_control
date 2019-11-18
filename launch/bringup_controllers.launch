@@ -1,0 +1,7 @@
+<launch>
+    <rosparam file="$(find open_manipulator_with_ros_control)/config/controllers.yaml" command="load"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="true"
+                output="screen"   args="joint_state_controller
+                                        arm_controller
+                                        gripper_controller"/>
+</launch>
