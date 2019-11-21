@@ -73,3 +73,4 @@ gripper_motor:
     enable: true
     gap_size: 1616
     current_limit: 0.1
+    stroke: 0.056
